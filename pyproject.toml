@@ -1,0 +1,23 @@
+[project]
+name = "walaa-school"
+version = "1.0.0"
+description = "Walaa School Manager"
+requires-python = ">=3.10"
+dependencies = [
+    "flet>=0.28.0",
+    "qrcode[pil]",
+    "reportlab",
+    "Pillow",
+    "arabic-reshaper",
+    "python-bidi",
+]
+
+[tool.flet]
+org = "com.anosy44"
+product = "WalaaSchool"
+
+[tool.flet.app]
+path = "."
+
+[tool.flet.android]
+package_name = "com.anosy44.walaaschool"
