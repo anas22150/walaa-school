@@ -30,15 +30,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install flet
 
-      # 1) إعداد Android SDK مع القبول التلقائي للتراخيص
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
           accept-android-sdk-licenses: true
 
-      # 2) خطوة إضافية للتأكيد (احتياطية)
       - name: Accept Android SDK Licenses
         run: |
+          set +o pipefail
           yes | sdkmanager --licenses || true
 
       - name: Build APK
