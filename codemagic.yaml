@@ -13,6 +13,6 @@ workflows:
           pip3 install flet
       - name: Build APK
         script: |
-          flet build apk --verbose
+          flet build apk --verbose --yes
     artifacts:
       - build/apk/*.apk
