@@ -1,15 +1,16 @@
 workflows:
   android-build:
     name: Build Flet Android APK
+    instance_type: mac_mini_m2
     max_build_duration: 60
-    instance_type: linux_x2
     environment:
       flutter: stable
-      xcode: latest
-      cocoapods: default
+      java: 17
+      python: 3.12
     scripts:
-      - name: Install Flet
+      - name: Install dependencies
         script: |
+          python3 -m pip install --upgrade pip
           pip3 install flet
       - name: Build APK
         script: |
