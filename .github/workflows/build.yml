@@ -15,6 +15,9 @@ jobs:
         with:
           target: apk
           runner-python-version: "3.12"
+        env:
+          FLET_CLI_NO_RICH_OUTPUT: "1"
+          FLET_CLI_LOG_FORMAT: "plain"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
