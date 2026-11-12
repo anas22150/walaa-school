@@ -21,3 +21,4 @@ path = "."
 
 [tool.flet.android]
 package_name = "com.anosy44.walaaschool"
+
